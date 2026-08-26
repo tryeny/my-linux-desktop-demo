@@ -1,12 +1,10 @@
 {
   "name": "My Linux Desktop",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
+  "postStartCommand": "/workspaces/my-linux-desktop-demo/start-desktop.sh",
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
