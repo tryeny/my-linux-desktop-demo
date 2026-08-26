@@ -1,9 +1,11 @@
 {
   "name": "My Linux Desktop",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
+  "runArgs": ["--shm-size=1g"],
+  "remoteUser": "vscode",
   "postStartCommand": "/workspaces/my-linux-desktop-demo/start-desktop.sh",
   "forwardPorts": [6080],
   "portsAttributes": {
