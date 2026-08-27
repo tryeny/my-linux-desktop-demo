@@ -6,10 +6,13 @@
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
+  "hostRequirements": {
+    "storage": 64
+  },
   "runArgs": ["--shm-size=1g"],
   "containerEnv": {
     "VNC_PASSWORD": "vscode",
-    "VNC_RESOLUTION": "1600x900x16"
+    "VNC_RESOLUTION": "1280x640x16"
   },
   "remoteUser": "vscode",
   "postStartCommand": "${containerWorkspaceFolder}/start-desktop.sh",
