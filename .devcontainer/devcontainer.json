@@ -7,13 +7,18 @@
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "runArgs": ["--shm-size=1g"],
+  "containerEnv": {
+    "VNC_PASSWORD": "vscode",
+    "VNC_RESOLUTION": "1600x900x16"
+  },
   "remoteUser": "vscode",
-  "postStartCommand": "/workspaces/my-linux-desktop-demo/start-desktop.sh",
+  "postStartCommand": "${containerWorkspaceFolder}/start-desktop.sh",
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
       "label": "Linux Desktop",
-      "visibility": "public"
+      "visibility": "public",
+      "onAutoForward": "openBrowser"
     }
   }
 }

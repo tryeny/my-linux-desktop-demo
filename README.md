@@ -8,8 +8,9 @@ browser through noVNC.
 [Create a Codespace](https://github.com/codespaces/new?repo=tryeny/my-linux-desktop-demo)
 
 After the Codespace finishes creating, open the forwarded **Linux Desktop**
-port (`6080`) from the Ports panel. The desktop starts automatically when the
-container starts.
+port (`6080`) from the Ports panel. Codespaces opens the browser automatically
+and loads noVNC at `/vnc.html`. The desktop starts automatically when the
+container starts. Use `vscode` as the VNC password.
 
 ## Local container setup
 

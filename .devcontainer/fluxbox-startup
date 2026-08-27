@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export DISPLAY="${DISPLAY:-:1}"
+
+if command -v xmodmap > /dev/null 2>&1 && [ -f "$HOME/.Xmodmap" ]; then
+    xmodmap "$HOME/.Xmodmap" 2>/dev/null || true
+fi
+
+if command -v xfdesktop > /dev/null 2>&1 && ! pgrep -u "$(id -u)" -x xfdesktop > /dev/null 2>&1; then
+    xfdesktop > /tmp/xfdesktop.log 2>&1 &
+fi
+
+if command -v xfce4-panel > /dev/null 2>&1 && ! pgrep -u "$(id -u)" -x xfce4-panel > /dev/null 2>&1; then
+    xfce4-panel > /tmp/xfce4-panel.log 2>&1 &
+fi
+
+exec fluxbox
