@@ -3,12 +3,12 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "features":
+  "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
-  "hostRequiremennts:" "hostRequirements": {
-  "storage": 32
-}
+  "hostRequirements": {
+    "storage": 32
+  },
   "runArgs": ["--shm-size=1g"],
   "containerEnv": {
     "VNC_PASSWORD": "vscode",
