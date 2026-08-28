@@ -3,7 +3,9 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "features": {
+  "features": {"hostRequirements": {
+  "storage": 64
+},
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "hostRequirements": {
