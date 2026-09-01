@@ -7,7 +7,7 @@
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "hostRequirements": {
-    "storage": 32
+    "storage": 16
   },
   "runArgs": ["--shm-size=1g"],
   "containerEnv": {
